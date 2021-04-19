@@ -1,0 +1,46 @@
+{
+  "name": "eiem-backend",
+  "version": "1.0.0",
+  "description": "EIEM API",
+  "main": "src/server.ts",
+  "scripts": {
+    "build": "tsc",
+    "buildWatch": "tsc -w",
+    "dev": "ts-node ./src/server.ts",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "start": "nodemon"
+  },
+  "author": "Trishnangshu Sekhar Goswami",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "tsconfig": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/cors": "^2.8.10",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.11",
+    "@types/jsonwebtoken": "^8.5.1",
+    "@types/morgan": "^1.9.2",
+    "@types/multer": "^1.4.5",
+    "@types/mysql": "^2.15.18",
+    "@types/node": "^14.14.35",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "tslint": "^6.1.3",
+    "typescript": "^4.2.3"
+  }
+}
