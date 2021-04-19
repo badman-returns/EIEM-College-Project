@@ -1,0 +1,7 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Tables = void 0;
+var Tables;
+(function (Tables) {
+    Tables["USER"] = "user";
+})(Tables = exports.Tables || (exports.Tables = {}));
