@@ -1,3 +1,4 @@
 export enum Tables {
-    USER = 'user',
+    USER = 'USERS',
+    MENU = "MASTER_MENUS",
 }

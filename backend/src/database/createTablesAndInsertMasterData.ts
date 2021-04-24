@@ -1,6 +1,8 @@
 import db from '../models/db';
 import { Encryption } from '../utility/encryption';
 import { Tables } from '../configs/table.config';
+import { Menu } from '../interfaces/menu.model';
+import { ReadFile } from '../service/readWriteJson.service';
 
 export default class CreateTablesAndInsertMasterData {
     constructor() {
@@ -63,6 +65,115 @@ export default class CreateTablesAndInsertMasterData {
             await CreateTablesAndInsertMasterData.createSuperAdminUser();
         } catch (e) {
             console.error('CREATE SUPER ADMIN', e);
+        }
+    }
+
+     // MENU TABLES
+     private static createPublicMenuTable() {
+        return new Promise((resolve, reject) => {
+            // db.query(`DROP TABLE ${Tables.MENU}`);
+            db.query(`CREATE TABLE IF NOT EXISTS ${Tables.MENU} (
+                id INT NOT NULL AUTO_INCREMENT, PRIMARY KEY(id),
+                level INT NOT NULL,
+                parentMenu VARCHAR(255) NULL,
+                name VARCHAR(255) NOT NULL,
+                adminPath VARCHAR(255),
+                publicPath VARCHAR(255),
+                position VARCHAR(255),
+                state VARCHAR(10),
+                content text,
+                updatedBy VARCHAR(255) NOT NULL,
+                updatedOn DATETIME DEFAULT current_timestamp,
+                CONSTRAINT contacts_unique UNIQUE (name))
+                `, (err, res) => {
+                if (err) {
+                    return reject(err);
+                }
+                if (res.length) {
+                    return resolve(true);
+                }
+                return resolve(null);
+            });
+        });
+    }
+
+    private static constructMenus(): Promise<any> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                let menuArray: Array<any> = [];
+                const menus = await ReadFile<Array<Menu>>(`../../data/Menus.json`);
+                menus.forEach((menu, index, array) => {
+                    menuArray.push({
+                        level: 1,
+                        parentMenu: null,
+                        name: menu.name,
+                        adminPath: menu.adminPath,
+                        publicPath: menu.publicPath,
+                        position: menu.position,
+                        state: menu.state,
+                        content: null,
+                        updatedBy: 'SYSTEM',
+                    });
+
+                    const subMenuList = menu.children.map((submenu) => {
+                        return {
+                            level: 2,
+                            parentMenu: menu.name,
+                            name: submenu.name,
+                            adminPath: submenu.adminPath,
+                            publicPath: submenu.publicPath,
+                            position: menu.position,
+                            state: menu.state,
+                            content: null,
+                            updatedBy: 'SYSTEM',
+                        }
+                    });
+
+                    menuArray = menuArray.concat(subMenuList);
+
+                    if (array.length === index + 1) {
+                        resolve(menuArray);
+                    }
+                });
+            } catch (error) {
+                reject(error);
+            }
+        });
+    }
+
+    private static createPublicMenus() {
+        return new Promise(async (resolve, reject) => {
+            let menuArray: Array<any>;
+            let keys: Array<string>;
+            let values: Array<any>;
+
+            menuArray = await CreateTablesAndInsertMasterData.constructMenus();
+            keys = Object.keys(menuArray[0]);
+            values = menuArray.map(obj => keys.map(key => obj[key]));
+
+            db.query(`INSERT IGNORE INTO ${Tables.MENU} (${keys.join(',')}) VALUES ?`, [values], (err, res) => {
+                if (err) {
+                    return reject(err);
+                }
+                if (res.length) {
+                    return resolve(true);
+                }
+                return resolve(null);
+            });
+        });
+    }
+
+    public static async createPublicMenuTableAndMenus() {
+        try {
+            await CreateTablesAndInsertMasterData.createPublicMenuTable();
+        } catch (e) {
+            console.error('CREATE MENU TABLE', e);
+        }
+
+        try {
+            await CreateTablesAndInsertMasterData.createPublicMenus();
+        } catch (e) {
+            console.error('CREATE MENUS', e);
         }
     }
 }

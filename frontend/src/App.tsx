@@ -1,10 +1,27 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch, } from 'react-router-dom';
+import PublicRouter from './routes/public';
 
 const App:React.FC = () => {
   return (
-    <div className="App">
-      <h1>Elitte Institute of Engineering And Management</h1>
-    </div>
+    <BrowserRouter>
+    <Switch>
+      {/* Login Routes */}
+      <Route exact path='/admin/login'>
+     
+      </Route>
+
+      {/* Admin Routes */}
+      <Route path='/admin'>
+      </Route>
+
+      {/* Public Routes */}
+      <Route path='/'>
+        <PublicRouter />
+      </Route>
+
+    </Switch>
+  </BrowserRouter>
   );
 }
 

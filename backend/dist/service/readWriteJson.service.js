@@ -19,13 +19,24 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const mysql = __importStar(require("mysql"));
-const dotenv = require('dotenv');
-dotenv.config();
-const Connection = mysql.createPool({
-    host: process.env.MYSQL_HOST,
-    user: process.env.MYSQL_USER,
-    password: process.env.MYSQL_PASSWORD,
-    database: process.env.MYSQL_DB_NAME,
-});
-exports.default = Connection;
+exports.ReadFile = void 0;
+const fs = __importStar(require("fs"));
+const path = __importStar(require("path"));
+class FileSystem {
+    constructor() {
+    }
+    static readFile(location) {
+        return new Promise((resolve, reject) => {
+            try {
+                const rawdata = fs.readFileSync(path.resolve(__dirname, location), "utf8");
+                const jsonData = JSON.parse(rawdata);
+                resolve(jsonData);
+            }
+            catch (error) {
+                reject(error);
+            }
+        });
+    }
+}
+const ReadFile = FileSystem.readFile;
+exports.ReadFile = ReadFile;

@@ -1,0 +1,323 @@
+[
+    {
+      "name": "Home",
+      "adminPath": "",
+      "publicPath": "",
+      "position": "top",
+      "state": 1,
+      "children": []
+    },
+    {
+      "name": "About Us",
+      "adminPath": "about",
+      "publicPath": "about",
+      "position": "top",
+      "state": 1,
+      "children": [
+        {
+          "name": "Introducing the University",
+          "adminPath": "about/vision-mission",
+          "publicPath": "about/vision-mission",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Organization Structure",
+          "adminPath": "about/organization-structure",
+          "publicPath": "about/organization-structure",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Committees",
+          "adminPath": "about/committees",
+          "publicPath": "about/committees",
+          "position": "top",
+          "state": 1
+        }
+      ]
+    },
+    {
+      "name": "Academics",
+      "adminPath": "academics",
+      "publicPath": "academics",
+      "position": "top",
+      "state": 1,
+      "children": [
+        {
+          "name": "Departments",
+          "adminPath": "academics/departments",
+          "publicPath": "academics/departments",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "List of Teacher",
+          "adminPath": "academics/teacher-list",
+          "publicPath": "academics/teacher-list",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Courses",
+          "adminPath": "academics/courses",
+          "publicPath": "academics/courses",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Prospectus",
+          "adminPath": "academics/prospectus",
+          "publicPath": "academics/prospectus",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Syllabus",
+          "adminPath": "academics/syllabus",
+          "publicPath": "academics/syllabus",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Academic Calender",
+          "adminPath": "academics/academic-calender",
+          "publicPath": "academics/academic-calender",
+          "position": "top",
+          "state": 1
+        }
+      ]
+    },
+    {
+      "name": "Students",
+      "adminPath": "students",
+      "publicPath": "students",
+      "position": "top",
+      "state": 1,
+      "children": [
+        {
+          "name": "Programme / Courses",
+          "adminPath": "students/programme-courses",
+          "publicPath": "students/programme-courses",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Courses Fees",
+          "adminPath": "students/course-fees",
+          "publicPath": "students/course-fees",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Admission Procedure",
+          "adminPath": "students/admission-procedure",
+          "publicPath": "students/admission-procedure",
+          "position": "top",
+          "state": 1
+        }
+      ]
+    },
+    {
+      "name": "Examination",
+      "adminPath": "examination",
+      "publicPath": "examination",
+      "position": "top",
+      "state": 1,
+      "children": [
+        {
+          "name": "Examination Fees",
+          "adminPath": "examination/examination-fees",
+          "publicPath": "examination/examination-fees",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Admission & Other Results",
+          "adminPath": "examination/admission-and-other-results",
+          "publicPath": "examination/admission-and-other-results",
+          "position": "top",
+          "state": 1
+        }
+      ]
+    },
+    {
+      "name": "Admission",
+      "adminPath": "admission",
+      "publicPath": "admission",
+      "position": "top",
+      "state": 1,
+      "children": [
+        {
+          "name": "Rules & Regulations",
+          "adminPath": "admission/rules-and-regulations",
+          "publicPath": "admission/rules-and-regulations",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Acts, Statutes and Regulations",
+          "adminPath": "admission/acts-statutes-and-regulations",
+          "publicPath": "admission/acts-statutes-and-regulations",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Courses",
+          "adminPath": "admission/courses",
+          "publicPath": "admission/courses",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Admission Schedules",
+          "adminPath": "admission/admission-schedules",
+          "publicPath": "admission/admission-schedules",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Admission Instruction",
+          "adminPath": "admission/admission-instruction",
+          "publicPath": "admission/pg/admission-instruction",
+          "position": "top",
+          "state": 1
+        }
+      ]
+    },
+    {
+      "name": "Administration",
+      "adminPath": "administration",
+      "publicPath": "administration",
+      "position": "top",
+      "state": 1,
+      "children": [
+        {
+          "name": "The Court",
+          "adminPath": "administration/the-court",
+          "publicPath": "administration/the-court",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "The Executive Council",
+          "adminPath": "administration/the-executive-council",
+          "publicPath": "administration/the-executive-council",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "The Statutory Committees",
+          "adminPath": "administration/statutory-committees",
+          "publicPath": "administration/statutory-committees",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Office Of Vice Chancellor",
+          "adminPath": "administration/office-of-vice-chancellor",
+          "publicPath": "administration/office-of-vice-chancellor",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Office Of Registrar",
+          "adminPath": "administration/office-of-registrar",
+          "publicPath": "administration/office-of-registrar",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Office Of Finance Officer",
+          "adminPath": "administration/office-of-finance-officer",
+          "publicPath": "administration/office-of-finance-officer",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Policies And Procedures",
+          "adminPath": "administration/policies-and-procedures",
+          "publicPath": "administration/policies-and-procedures",
+          "position": "top",
+          "state": 1
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "adminPath": "contact",
+      "publicPath": "contact",
+      "position": "top",
+      "state": 1,
+      "children": [
+        {
+          "name": "Information Office",
+          "adminPath": "contact/information-office",
+          "publicPath": "contact/information-office",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Postal Address",
+          "adminPath": "contact/postal-address",
+          "publicPath": "contact/postal-address",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "How To Reach",
+          "adminPath": "contact/how-to-reach",
+          "publicPath": "contact/how-to-reach",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Telephone Directory",
+          "adminPath": "contact/telephone-directory",
+          "publicPath": "contact/telephone-directory",
+          "position": "top",
+          "state": 1
+        },
+        {
+          "name": "Email Directory",
+          "adminPath": "contact/email-directory",
+          "publicPath": "contact/email-directory",
+          "position": "top",
+          "state": 1
+        }
+      ]
+    },
+    {
+      "name": "VC's Desk",
+      "adminPath": "vcdesk",
+      "publicPath": "vcdesk",
+      "position": "left",
+      "state": 1,
+      "children": []
+    },
+    {
+      "name": "Media",
+      "adminPath": "media",
+      "publicPath": "media",
+      "position": "left",
+      "state": 1,
+      "children": []
+    },
+    {
+      "name": "Important Links",
+      "adminPath": "important-links",
+      "publicPath": "important-links",
+      "position": "top-right",
+      "state": 1,
+      "children": []
+    },
+    {
+      "name": "Results/Transcripts",
+      "adminPath": "result-transcript",
+      "publicPath": "result-transcript",
+      "position": "right",
+      "state": 1,
+      "children": []
+    }
+  ]
+  

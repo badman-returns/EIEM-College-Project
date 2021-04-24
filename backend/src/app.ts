@@ -61,6 +61,9 @@ class App {
       console.log(`Creating Admin User Table and Super Admin User ...`);
       await MasterTables.createUserTableAndSuperAdmin();
 
+      console.log(`Creating Menu table and Insert default menus from ./data/Menus.json ...`);
+      await MasterTables.createPublicMenuTableAndMenus();
+
     } catch (error) {
       throw new Error(error);
     }
@@ -68,7 +71,7 @@ class App {
 
   private routes() {
     this.app.get('/', (req: Request, res: Response, next: NextFunction) => {
-      res.send('Elitte Institute of Engineering and Management');
+      res.send('Elitte Institute of Engineering and Management using docker');
     });
     this.app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
     this.app.use('/api/v1', this.apiV1Routes);

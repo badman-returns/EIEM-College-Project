@@ -63,6 +63,8 @@ class App {
             try {
                 console.log(`Creating Admin User Table and Super Admin User ...`);
                 yield createTablesAndInsertMasterData_1.default.createUserTableAndSuperAdmin();
+                console.log(`Creating Menu table and Insert default menus from ./data/Menus.json ...`);
+                yield createTablesAndInsertMasterData_1.default.createPublicMenuTableAndMenus();
             }
             catch (error) {
                 throw new Error(error);
