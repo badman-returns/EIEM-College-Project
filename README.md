@@ -1,6 +1,5 @@
 # Elitte Institute of Engineering and Mnagement
 
-We are going to build a web application using microservice architecture for our college Elitte Institute of Engineering and Management.
 The application will consist of a separate frontend, backend, and database. It will consist of Content Management System which requires Authentication. From the CMS Admin Users will be able to do CRUD Operations and will be able to manipulate data in the frontend dynamically. The frontend will communicate with the backend using REST API. The UI/UX design of the frontend will be done using React.js. The application is going to follow the Model View Controller Architecture (MVC). The frontend is going to represent the View part. The Controller Section is going to consist of Business Logic and the Model is going to contain all the Database Queries.
 ### Required Toools
 * VScode - Code Editor
