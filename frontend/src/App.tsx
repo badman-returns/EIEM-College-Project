@@ -1,27 +1,27 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, } from 'react-router-dom';
+import { HashRouter, Route, Switch, } from 'react-router-dom';
 import PublicRouter from './routes/public';
 
-const App:React.FC = () => {
+const App: React.FC = () => {
   return (
-    <BrowserRouter>
-    <Switch>
-      {/* Login Routes */}
-      <Route exact path='/admin/login'>
-     
-      </Route>
+    <HashRouter>
+      <Switch>
+        {/* Login Routes */}
+        <Route exact path='/admin/login'>
 
-      {/* Admin Routes */}
-      <Route path='/admin'>
-      </Route>
+        </Route>
 
-      {/* Public Routes */}
-      <Route path='/'>
-        <PublicRouter />
-      </Route>
+        {/* Admin Routes */}
+        <Route path='/admin'>
+        </Route>
 
-    </Switch>
-  </BrowserRouter>
+        {/* Public Routes */}
+        <Route path='/'>
+          <PublicRouter />
+        </Route>
+
+      </Switch>
+    </HashRouter>
   );
 }
 

@@ -1,14 +1,12 @@
 import React from 'react'
-import Banner from '../../components/caraousel/banner';
-import Footer from '../../components/footer/footer';
-import Header from '../../components/header/header';
+import About from './components/about/about';
+import Banner from './components/banner/banner';
 
 const HomePage:React.FC = () => {
     return(
         <>
-        <Header />
         <Banner/>
-        <Footer />
+        <About />
         </>
     )
 }

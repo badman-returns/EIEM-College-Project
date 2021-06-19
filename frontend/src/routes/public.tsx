@@ -1,11 +1,14 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+import Footer from '../main/components/footer/footer';
+import Header from '../main/components/header/header';
 import AboutPage from '../main/pages/about/about';
 import HomePage from '../main/pages/home/home';
 
 const PublicRouter: React.FC = () => {
     return (
-        <BrowserRouter>
+        <>
+            <Header />
             <Switch>
                 <Route path='/about'>
                     <AboutPage />
@@ -14,7 +17,8 @@ const PublicRouter: React.FC = () => {
                     <HomePage />
                 </Route>
             </Switch>
-        </BrowserRouter>
+            <Footer />
+        </>
     )
 }
 

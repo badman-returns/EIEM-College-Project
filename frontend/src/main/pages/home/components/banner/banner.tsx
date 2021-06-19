@@ -1,8 +1,7 @@
 import React from 'react';
 import Carousel, { autoplayPlugin } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
-import imageOne from '../../../assets/college1.png';
-import imageTwo from '../../../assets/college2.png';
+import imageOne from '../../../../../assets/college1.png';
 
 const Banner: React.FC = () => {
     return (
@@ -20,7 +19,7 @@ const Banner: React.FC = () => {
                 animationSpeed={1000}
             >
                 <img src={imageOne} alt='bgimage1' />
-                <img src={imageTwo} alt='bgimage2' />
+                <img src={imageOne} alt='bgimage1' />
             </Carousel>
         </>
     )
