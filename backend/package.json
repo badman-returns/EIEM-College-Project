@@ -11,6 +11,7 @@
     "legacyWatch": "true",
     "start": "nodemon -L",
     "local": "nodemon",
+    "local": "nodemon",
     "prod": "node dist/server.js"
   },
   "author": "Trishnangshu Sekhar Goswami",
