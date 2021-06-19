@@ -1,0 +1,3 @@
+.BrainhubCarouselItem--active > .banner {
+  transform: scale(1.41 ) !important;
+}
