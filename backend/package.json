@@ -10,6 +10,7 @@
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "legacyWatch": "true",
     "start": "nodemon -L",
+    "local": "nodemon",
     "prod": "node dist/server.js"
   },
   "author": "Trishnangshu Sekhar Goswami",
