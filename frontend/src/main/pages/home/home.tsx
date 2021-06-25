@@ -3,6 +3,8 @@ import About from './components/about/about';
 import Banner from './components/banner/banner';
 import Notice from './components/notice/notice';
 import Announcement from './components/announcement/announcement';
+import Message from './components/message/message';
+
 const HomePage:React.FC = () => {
     return(
         <>
@@ -10,6 +12,7 @@ const HomePage:React.FC = () => {
         <About />
         <Notice/>
         <Announcement/>
+        <Message/>
         </>
     )
 }
