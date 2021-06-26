@@ -58,8 +58,7 @@ const Message : React.FC = () => {
                                         explore life, and learn from the excellent faculty and from each other. Throw in the nation’s first and largest IITM Research Park next door with an incredible deep technology startup ecosystem, 
                                         excellent campus infrastructure, generous alumni support and involvement, and a fast-expanding engagement with the best of our peers globally, and you have an Institute that everyone wishes to be a student, 
                                         employee, alumnus, or partner of. Welcome, once again, to IIT Madras! Vanakkam!!
-                                        <br>
-                                        </br>
+                                        <br></br>
                                         Bhaskar Ramamurthi
                                         </p>
                                     </Grid>
