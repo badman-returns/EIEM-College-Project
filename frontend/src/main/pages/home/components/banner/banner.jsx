@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     }
 })
 
-const Banner: React.FC = () => {
+const Banner = () => {
     const classes = useStyles();
     return (
         <>

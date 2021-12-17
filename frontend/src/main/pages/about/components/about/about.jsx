@@ -1,23 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
-interface About {
-    id: string;
-    userId: string;
-    title: string;
-    completed: boolean;
-}
 
-const AboutComponent: React.FC = () => {
+const AboutComponent = () => {
 
-    const intialState: About = {
+    const intialState = {
         id: '',
         userId: '',
         title: '',
         completed: true,
     }
 
-    const [about, setAbout] = useState<About>(intialState);
+    const [about, setAbout] = useState(intialState);
     console.log(about);
 
     useEffect(() => {

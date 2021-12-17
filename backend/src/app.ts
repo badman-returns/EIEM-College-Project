@@ -3,8 +3,10 @@ import cookieParser from 'cookie-parser';
 import path from 'path';
 import cors from 'cors';
 import logger from 'morgan';
+import mongoose from 'mongoose';
 import express, { NextFunction, Response, Request } from 'express';
-import MasterTables from './database/createTablesAndInsertMasterData';
+import { AdminRouter, PublicRouter } from './routes';
+import { DefaultAdminUser } from './utility/adminUserCreator';
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -21,9 +23,19 @@ class App {
     this.routes();
   }
 
+  public createDBConnection() {
+    mongoose.connect(process.env.MONGODB_URI).then(() => {
+            console.log('Connected to Database ...')
+            DefaultAdminUser.createDefaultAdminUser().then(() => {
+                console.log('Default Admin User created ...');
+            }).catch(error => console.log(error))
+        }).catch(error => console.log(error));
+}
+
   public listen() {
-    this.app.listen(process.env.SERVER_PORT, () => {
-      console.log(`App listening on the port ${process.env.SERVER_PORT}`);
+    this.createDBConnection();
+    this.app.listen(process.env.PORT, () => {
+      console.log(`App listening on the port ${process.env.PORT}`);
     });
   }
 
@@ -55,26 +67,14 @@ class App {
     }
   }
 
-
-  public async createDefaultTables() {
-    try {
-      console.log(`Creating Admin User Table and Super Admin User ...`);
-      await MasterTables.createUserTableAndSuperAdmin();
-
-      console.log(`Creating Menu table and Insert default menus from ./data/Menus.json ...`);
-      await MasterTables.createPublicMenuTableAndMenus();
-
-    } catch (error) {
-      throw new Error(error);
-    }
-  }
-
   private routes() {
     this.app.get('/', (req: Request, res: Response, next: NextFunction) => {
-      res.send('Elitte Institute of Engineering and Management using docker');
+      res.send('Elitte Institute of Engineering And Management');
     });
     this.app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
     this.app.use('/api/v1', this.apiV1Routes);
+    this.apiV1Routes.use('/', PublicRouter);
+    this.apiV1Routes.use('/admin', AdminRouter);
   }
 }
 

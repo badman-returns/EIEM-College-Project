@@ -5,7 +5,7 @@ import Notice from './components/notice/notice';
 import Announcement from './components/announcement/announcement';
 import Message from './components/message/message';
 
-const HomePage:React.FC = () => {
+const HomePage = () => {
     return(
         <>
         <Banner/>

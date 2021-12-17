@@ -70,7 +70,7 @@ const useStyles = makeStyles({
     }
 })
 
-const Footer: React.FC = () => {
+const FooterMenu = () => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
@@ -268,4 +268,4 @@ const Footer: React.FC = () => {
     )
 }
 
-export default Footer;
+export default FooterMenu;

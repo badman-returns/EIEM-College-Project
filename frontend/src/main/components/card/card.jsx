@@ -1,12 +1,8 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
-interface props {
-  imageUrl: string;
-  heading: string;
-  viewAll: Function;
-}
-const Card: React.FC<props> = ({ imageUrl, heading, viewAll }: props) => {
+
+const Card = ({ imageUrl, heading, viewAll }) => {
   return (
     <Grid item xs={12} sm={6} md={4} style={{ padding: "20px" }}>
       <Grid container justify="center" alignItems="center">

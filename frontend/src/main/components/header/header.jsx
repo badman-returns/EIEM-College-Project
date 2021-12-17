@@ -57,7 +57,7 @@ const useStyles = makeStyles({
     },
 })
 
-const Header: React.FC = () => {
+const Header = () => {
     const classes = useStyles();
     return (
         <>

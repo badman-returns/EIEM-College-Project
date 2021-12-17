@@ -1,4 +1,5 @@
 import * as express from "express";
+// import { GetAllNotice } from "../admin/controller/admin.notice.controller";
 
 class Public {
     public router: express.Router;
@@ -9,7 +10,7 @@ class Public {
 
     private configRoutes() {
 
-       
+    //    this.router.get('/notice', GetAllNotice);
 
     }
 }

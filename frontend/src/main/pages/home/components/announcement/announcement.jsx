@@ -1,8 +1,6 @@
 import React from 'react';
 import Card from "../../../../components/card/card";
 import { Grid } from '@material-ui/core';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import Container from "@material-ui/core/Container";
 import { makeStyles } from '@material-ui/core/styles';
 import Line from '../../../../../assets/line.svg';
 import Button from '@material-ui/core/Button';
@@ -13,11 +11,9 @@ const useStyles = makeStyles({
     }
 })
 
-const Notice: React.FC = () => {
-    const viewAll: Function = () => console.log("click");
-    let URL =
-        "https://images.unsplash.com/photo-1593642533144-3d62aa4783ec?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80";
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+const Announcement = () => {
+    const viewAll = () => console.log("click");
+    let URL ="https://images.unsplash.com/photo-1593642533144-3d62aa4783ec?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80";
     const classes = useStyles();
     return (
         <>
@@ -34,7 +30,7 @@ const Notice: React.FC = () => {
                                             <img src={Line} alt='line' />
                                         </Grid>
                                         <Grid item>
-                                            <h1>Notice</h1>
+                                            <h1>Announcement</h1>
                                         </Grid>
                                         <Grid container>
                                             <Card imageUrl={URL} heading="1st year admit card collecting date" viewAll={viewAll} />
@@ -59,4 +55,5 @@ const Notice: React.FC = () => {
         </>
     )
 }
-export default Notice;
+
+export default Announcement;
